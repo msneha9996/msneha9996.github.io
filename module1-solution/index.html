@@ -23,7 +23,8 @@
              <button class="btn btn-default" ng-click="checkDishes()">Check If Too Much</button>
          </div>
          <div class="form-group message">
-           {{message}}
+           <span ng-style="{color : 'green'}">{{message}}</span>
+           <span ng-style="{color : 'red'}">{{msg}}</span>
          </div>
 
          <div>This app do NOT consider empty item, i.e., , , as an item towards to the count. </div>

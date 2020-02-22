@@ -9,6 +9,18 @@ function LunchCheckController($scope) {
   $scope.checkDishes = function () {
     var num = countDishes($scope.dishes);
     $scope.message = buildMessage(num);
+    if($scope.message == 'Please enter data first') {
+      $scope.msg = 'Please enter data first';
+      $scope.message = "";
+    }
+    else if($scope.message == 'Enjoy!') {
+        $scope.msg = "";
+        $scope.message = 'Enjoy!';
+    }
+    else if($scope.message == 'Too much!') {
+        $scope.msg = "";
+        $scope.message = 'Too much!';
+    }
   };
 
   function countDishes(dishes) {
